@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="EventSample">
+    <head>
+        <script src="assets/application.js"></script>
+        <link href="assets/application.css" media="all" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <br/>
+            <font size="4">Hello {{yourName}}!</font>
+        </div>
+        <div class="content" ng-controller="EventsCtrl">
+            <div class="content_div">
+                <div ng-repeat="event in events">
+                    {{event.title}}&nbsp;&nbsp;|&nbsp;&nbsp;{{event.description}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
